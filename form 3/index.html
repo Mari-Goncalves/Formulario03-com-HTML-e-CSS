@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 3</title>
+
+    <!-- Base, reset e letra -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Cabecalho -->
+    <link rel="stylesheet" href="./css/cabecalho/cabecalho.css">
+
+    <!-- Principal -->
+
+      <!-- Formulario -->
+    <link rel="stylesheet" href="./css/principal2/base formulario/formulario-container.css">
+    <link rel="stylesheet" href="./css/principal2/base formulario/formulario-input.css">
+    <link rel="stylesheet" href="./css/principal2/base formulario/formulario-label.css">
+    <link rel="stylesheet" href="./css/principal2/base formulario/formulario-paragrafo.css">
+    <link rel="stylesheet" href="./css/principal2/base formulario/formulario.css">
+
+      <!-- Seleção genero favorito -->
+   <link rel="stylesheet" href="./css/principal2/selecao genero favorito/container-selecao-genero.css">
+   <link rel="stylesheet" href="./css/principal2/selecao genero favorito/option-genero.css">
+   <link rel="stylesheet" href="./css/principal2/selecao genero favorito/select-genero.css">
+
+      <!-- Radio button atualizacoes -->
+   <link rel="stylesheet" href="./css/principal2/radio button atualizacoes/container-atualizacoes.css">
+   <link rel="stylesheet" href="./css/principal2/radio button atualizacoes/input-radio.css">
+
+      <!-- Selecao formato leitura -->
+   <link rel="stylesheet" href="./css/principal2/selecao formato leitura/container-selecao-formato.css">
+   <link rel="stylesheet" href="./css/principal2/selecao formato leitura/option-formato-leitura.css">
+   <link rel="stylesheet" href="./css/principal2/selecao formato leitura/select-formato-leitura.css">
+
+      <!-- Checkbox preferências literárias -->
+   <link rel="stylesheet" href="./css/principal2/checkbox preferencias literarias/container-preferencia-literaria.css">
+   <link rel="stylesheet" href="./css/principal2/checkbox preferencias literarias/input-checkbox.css">
+
+      <!-- Área de mensagem -->
+   <link rel="stylesheet" href="./css/principal2/area de mensagem/container-mensagem.css">
+   <link rel="stylesheet" href="./css/principal2/area de mensagem/mensagem.css">
+
+      <!-- Criação de senha -->
+   <link rel="stylesheet" href="./css/principal2/criacao de senha/container-senha.css">
+
+      <!-- Botão de envio -->
+   <link rel="stylesheet" href="./css/principal2/botao envio/botao-enviar.css">
+   <link rel="stylesheet" href="./css/principal2/botao envio/container-botao-enviar.css">
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Formulario 3</h1>
+    </header>
+
+    <main class="principal">
+
+        <section class="container_form">
+         <!-- Formulário -->
+            <form class="form" method="post">
+                <label for="inpNome" class="form_lab">Nome</label>
+                <input type="text" class="form_inp" id="inpNome" placeholder="Escreva seu nome" required>
+
+                <label for="inpEmail" class="form_lab">Email</label>
+                <input type="email" class="form_inp" id="inpEmail" placeholder="Escreva seu email" required>
+
+                <label for="inpIdade" class="form_lab">Idade (opcional)</label>
+                <input type="number" class="form_inp" id="inpIdade" placeholder="Idade">
+            
+                <!-- Seleção de genêro literário favorito -->
+                <section class="form_container_selecaoGenero">
+                   <p class="form_p">Qual seu gênero literário favorito?</p>
+                   <select class="form_selGenero">
+                       <option value="ac" class="form_optGenero">Ação</option>
+                        <!-- value -> valor que será armazenado quando o usuário escolher a opção -->
+                        
+                       <option value="av" class="form_optGenero" selected>Aventura</option>
+                       <!-- selected -> determinada opção será a pré selecionada -->
+   
+                       <option value="su" class="form_optGenero">Suspense</option>
+                       <option value="te" class="form_optGenero">Terror</option>
+                       <option value="fa" class="form_optGenero">Fantasia</option>
+                       <option value="ro" class="form_optGenero">Romace</option>
+                   </select>
+
+                </section>
+
+                <!-- Radio button -> se deseja receber atualizações -->
+                <section class="form_container_atualizacoes">
+                   <p class="form_p">Você gostaria de receber email com nossas atualizações?</p>
+                   <label for="radioS" class="form_lab" >
+                     <input type="radio" name="atualizacao" value="sim" class="inp-radio" id="radioS"> Sim
+                   </label>
+                   <label for="radioN" class="form_lab">
+                     <input type="radio" name="atualizacao" value="nao" class="inp-radio" id="radioN"> Não
+                   </label>
+
+                  </section>
+
+                  <!-- Seleção de formato preferido de leitura -->
+                  <section class="form_container_selecaoFormatoLeitura">
+                     <p class="form_p">Você prefere histórias no formato: </p>
+                     <select class="form_selFormatoLeitura">
+                       <option class="form_optFormatoLeitura" disabled selected value>Selecione uma opção</option>
+                       <option class="form_optFormatoLeitura" value="fisico">Físico</option>
+                       <option class="form_optFormatoLeitura" value="pdf">PDF</option>
+                       <option class="form_optFormatoLeitura" value="epub">Epub</option>
+                    </select>
+
+                  </section>
+
+                  <!-- Checkbox sobre preferências de genêros literários -->
+                  <section class="form_container_preferenciaLit">
+                     <p class="form_p">Escolha os genêros de sua preferência (quantos quiser)</p>
+
+                     <label class="form_lab" for="aut"><input class="inp-check" name="preferencias" value="autobiografia" type="checkbox" id="aut">Autobiografia</label><br>
+                     <label class="form_lab" for="com"><input class="inp-check" name="preferencias" value="comedia" type="checkbox" id="com">Comédia</label><br>
+                     <label class="form_lab" for="dra"><input class="inp-check" name="preferencias" value="drama" type="checkbox" id="dra">Drama</label><br>
+                     <label class="form_lab" for="fab"><input class="inp-check" name="preferencias" value="fabula" type="checkbox" id="fab">Fábula</label><br>
+                     <label class="form_lab" for="fant"><input class="inp-check" name="preferencias" value="fantasia" type="checkbox" id="fant">Fantasia</label><br>
+                     <label class="form_lab" for="med"><input class="inp-check" name="preferencias" value="medieval" type="checkbox" id="med">Medieval</label><br>
+                     <label class="form_lab" for="poe"><input class="inp-check" name="preferencias" value="poesia" type="checkbox" id="poe">Poesia</label><br>
+                     <label class="form_lab" for="rom"><input class="inp-check" name="preferencias" value="romance" type="checkbox" id="rom" checked>Romance</label><br>
+                     <label class="form_lab" for="sus"><input class="inp-check" name="preferencias" value="suspense" type="checkbox" id="sus">Suspense</label><br>
+                     <label class="form_lab" for="ter"><input class="inp-check" name="preferencias" value="terror" type="checkbox" id="ter">Terror</label><br>
+                     <label class="form_lab" for="thr"><input class="inp-check" name="preferencias" value="thriller" type="checkbox" id="thr">Thriller</label><br>
+
+                  </section>
+
+                  <!-- Textarea ->  autores e/ou obras favoritas -->
+                  <section class="form_container_mensagem">
+                     <p class="form_p">Deixe uma dica sobre seus autores e/ou obras favoritas</p>
+                     <textarea name="mensagem" id="men" class="form_mensagem" cols="45" rows="10" placeholder="Escreva aqui..."></textarea>
+
+                  </section>
+
+                  <!-- Criação de senha -->
+                  <section class="form_container_senha">
+                     <label class="form_lab" for="senha">Crie uma senha:<input class="form_inp" type="password" id="senha" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$" title="Sua senha deve ter entre 4 e 8 caracteres. Minímo uma letra maiúscula, uma minúscula e um número."></label>
+
+                  </section>
+
+                  <!-- Botão de envio do formulário -->
+                  <section class="form_container_botaoEnviar">
+                     <button class="form_botaoEnviar" type="submit">Enviar formulario</button>
+                  </section>
+                
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
